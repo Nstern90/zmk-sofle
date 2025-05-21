@@ -10,16 +10,15 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&left_encoder { resolution = <2>; };
+&left_encoder { steps = <40> /* Change this to your encoder's number of detents times 2 */; };
 
-&right_encoder { resolution = <2>; };
+&right_encoder { steps = <40> /* Change this to your encoder's number of detents times 2 */; };
 
 / {
     macros {
         // System and Power
 
         tm: tm {
-            label = "TASK_MANAGER";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -32,7 +31,6 @@
         };
 
         slp: slp {
-            label = "SLEEP";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -47,7 +45,6 @@
         };
 
         rst: rst {
-            label = "RESTART";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -62,7 +59,6 @@
         };
 
         off: off {
-            label = "SHUTDOWN";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -79,7 +75,6 @@
         // Bluetooth
 
         ubt0: ubt0 {
-            label = "USE_BLUE_TOOTH_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -92,7 +87,6 @@
         };
 
         ubt1: ubt1 {
-            label = "USE_BLUE_TOOTH_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -105,7 +99,6 @@
         };
 
         ubt2: ubt2 {
-            label = "USE_BLUE_TOOTH_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -120,7 +113,6 @@
         // Various Macros
 
         teams_mute: teams_mute {
-            label = "TEAMS_MUTE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -147,7 +139,6 @@
         // Windows alt code Special Characters        
 
         smfada_a: smfada_a {
-            label = "SMALL_FADA_A";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -162,7 +153,6 @@
         };
 
         lfada_a: lfada_a {
-            label = "LARGE_FADA_A";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -177,7 +167,6 @@
         };
 
         smumlaut_a: smumlaut_a {
-            label = "SMALL_UMLAUT_A";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -192,7 +181,6 @@
         };
 
         lumlaut_a: lumlaut_a {
-            label = "LARGE_UMLAUT_A";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -207,7 +195,6 @@
         };
 
         smlat_ae: smlat_ae {
-            label = "SMALL_LATIN_AE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -222,7 +209,6 @@
         };
 
         lglat_ae: lglat_ae {
-            label = "LARGE_LATIN_AE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -237,7 +223,6 @@
         };
 
         smfada_e: smfada_e {
-            label = "SMALL_FADA_E";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -252,7 +237,6 @@
         };
 
         lfada_e: lfada_e {
-            label = "LARGE_FADA_E";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -267,7 +251,6 @@
         };
 
         smfada_i: smfada_i {
-            label = "SMALL_FADA_I";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -282,7 +265,6 @@
         };
 
         lfada_i: lfada_i {
-            label = "LARGE_FADA_I";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -297,7 +279,6 @@
         };
 
         smfada_o: smfada_o {
-            label = "SMALL_FADA_O";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -312,7 +293,6 @@
         };
 
         lfada_o: lfada_o {
-            label = "LARGE_FADA_O";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -327,7 +307,6 @@
         };
 
         smumlaut_o: smumlaut_o {
-            label = "SMALL_UMLAUT_O";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -342,7 +321,6 @@
         };
 
         lumlaut_o: lumlaut_o {
-            label = "LARGE_UMLAUT_O";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -357,7 +335,6 @@
         };
 
         smfada_u: smfada_u {
-            label = "SMALL_FADA_U";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -372,7 +349,6 @@
         };
 
         lfada_u: lfada_u {
-            label = "LARGE_FADA_U";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -387,7 +363,6 @@
         };
 
         smumlaut_u: smumlaut_u {
-            label = "SMALL_UMLAUT_U";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -402,7 +377,6 @@
         };
 
         lumlaut_u: lumlaut_u {
-            label = "LARGE_UMLAUT_U";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -417,7 +391,6 @@
         };
 
         smtil_n: smtil_n {
-            label = "SMALL_TILDE_N";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -432,7 +405,6 @@
         };
 
         ltil_n: ltil_n {
-            label = "LARGE_TILDE_N";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -447,7 +419,6 @@
         };
 
         essette_s: essette_s {
-            label = "ESSETTE_S";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -466,7 +437,6 @@
         //Symbols
 
         euro: euro {
-            label = "EURO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -481,7 +451,6 @@
         };
 
         us_cent: us_cent {
-            label = "US_CENT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -496,7 +465,6 @@
         };
 
         uk_pnd: uk_pnd {
-            label = "UK_POUND";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -511,7 +479,6 @@
         };
 
         degree: degree {
-            label = "DEGREE_SIGN";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -526,7 +493,6 @@
         };
 
         inv_exc: inv_exc {
-            label = "INVERTED_EXCLAMATION_MARK";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -541,7 +507,6 @@
         };
 
         inv_ques: inv_ques {
-            label = "INVERTED_QUESTION_MARK";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -556,7 +521,6 @@
         };
 
         plus_min: plus_min {
-            label = "PLUS_MINUS_SIGN";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -573,7 +537,6 @@
         //IPA
 
         schwa: schwa {
-            label = "SCHWA";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -590,7 +553,6 @@
         //Diacritical Characters
 
         smogo_a: smogo_a {
-            label = "SMALL_OGONEK_A";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -605,7 +567,6 @@
         };
 
         logo_a: logo_a {
-            label = "LARGE_OGONEK_A";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -620,7 +581,6 @@
         };
 
         smogo_e: smogo_e {
-            label = "SMALL_OGONEK_E";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -635,7 +595,6 @@
         };
 
         logo_e: logo_e {
-            label = "LARGE_OGONEK_E";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -650,7 +609,6 @@
         };
 
         smacute_c: smacute_c {
-            label = "SMALL_ACUTE_C";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -665,7 +623,6 @@
         };
 
         lacute_c: lacute_c {
-            label = "LARGE_ACUTE_C";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -680,7 +637,6 @@
         };
 
         smdark_l: smdark_l {
-            label = "SMALL_DARK_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -695,7 +651,6 @@
         };
 
         ldark_l: ldark_l {
-            label = "LARGE_DARK_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -710,7 +665,6 @@
         };
 
         smacute_n: smacute_n {
-            label = "SMALL_ACUTE_N";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -725,7 +679,6 @@
         };
 
         lacute_n: lacute_n {
-            label = "LARGE_ACUTE_N";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -740,7 +693,6 @@
         };
 
         smacute_s: smacute_s {
-            label = "SMALL_ACUTE_S";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -755,7 +707,6 @@
         };
 
         lacute_s: lacute_s {
-            label = "LARGE_ACUTE_S";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -770,7 +721,6 @@
         };
 
         smacute_z: smacute_z {
-            label = "SMALL_ACUTE_Z";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -785,7 +735,6 @@
         };
 
         lacute_z: lacute_z {
-            label = "LARGE_ACUTE_Z";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -800,7 +749,6 @@
         };
 
         smdot_z: smdot_z {
-            label = "SMALL_DOT_Z";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -815,7 +763,6 @@
         };
 
         ldot_z: ldot_z {
-            label = "LARGE_DOT_Z";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -832,7 +779,6 @@
         // Fractions
 
         one_half: one_half {
-            label = "ONE_HALF";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -847,7 +793,6 @@
         };
 
         one_third: one_third {
-            label = "ONE_THIRD";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -862,7 +807,6 @@
         };
 
         one_fourth: one_fourth {
-            label = "ONE_FOURTH";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -877,7 +821,6 @@
         };
 
         one_eighth: one_eighth {
-            label = "ONE_EIGHTH";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -892,7 +835,6 @@
         };
 
         two_thirds: two_thirds {
-            label = "TWO_THIRDS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -907,7 +849,6 @@
         };
 
         three_fourths: three_fourths {
-            label = "THREE_FOURTHS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -922,7 +863,6 @@
         };
 
         three_eighths: three_eighths {
-            label = "THREE_EIGHTHS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -937,7 +877,6 @@
         };
 
         five_eighths: five_eighths {
-            label = "FIVE_EIGHTHS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -952,7 +891,6 @@
         };
 
         seven_eighths: seven_eighths {
-            label = "SEVEN_EIGHTHS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -969,7 +907,6 @@
         // Operators
 
         less_equ: less_equ {
-            label = "LESS_THEN_OR_EQUAL_TO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -984,7 +921,6 @@
         };
 
         gtr_equ: gtr_equ {
-            label = "GREATER_THEN_OR_EQUAL_TO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -999,7 +935,6 @@
         };
 
         not_equ: not_equ {
-            label = "DOES_NOT_EQUAL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -1014,7 +949,6 @@
         };
 
         alm_equ: alm_equ {
-            label = "ALMOST_EQUAL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -1029,7 +963,6 @@
         };
 
         dbl_left: dbl_left {
-            label = "DOUBLE_LEFT_MARKS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -1044,7 +977,6 @@
         };
 
         dbl_right: dbl_right {
-            label = "DOUBLE_RIGHT_MARKS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
@@ -1083,7 +1015,6 @@
 
         rgb_bri_sat_inc: rgb_bri_sat_inc {
             compatible = "zmk,behavior-mod-morph";
-            label = "RGB_BRIGHTNESS_SATURATION_INCREASE";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_BRI>;
 
@@ -1092,7 +1023,6 @@
 
         rgb_bri_sat_dec: rgb_bri_sat_dec {
             compatible = "zmk,behavior-mod-morph";
-            label = "RGB_BRIGHTNESS_SATURATION_DECREASE";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAD>, <&rgb_ug RGB_BRD>;
 
@@ -1101,7 +1031,6 @@
 
         rgb_inc: rgb_inc {
             compatible = "zmk,behavior-mod-morph";
-            label = "RGB_INCREASE";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUI>, <&rgb_bri_sat_inc>;
 
@@ -1110,7 +1039,6 @@
 
         rgb_dec: rgb_dec {
             compatible = "zmk,behavior-mod-morph";
-            label = "RGB_DECREASE";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUD>, <&rgb_bri_sat_dec>;
 
@@ -1121,7 +1049,6 @@
 
         ret_menu: ret_menu {
             compatible = "zmk,behavior-mod-morph";
-            label = "RETURN_MENU";
             #binding-cells = <0>;
             bindings = <&kp RET>, <&kp K_APPLICATION>;
 
@@ -1132,7 +1059,6 @@
 
         fada_a: fada_a {
             compatible = "zmk,behavior-mod-morph";
-            label = "FADA_A";
             #binding-cells = <0>;
             bindings = <&smfada_a>, <&lfada_a>;
 
@@ -1141,7 +1067,6 @@
 
         ogonek_a: ogonek_a {
             compatible = "zmk,behavior-mod-morph";
-            label = "OGONEK_A";
             #binding-cells = <0>;
             bindings = <&smogo_a>, <&logo_a>;
 
@@ -1150,7 +1075,6 @@
 
         umlaut_a: umlaut_a {
             compatible = "zmk,behavior-mod-morph";
-            label = "UMLAUT_A";
             #binding-cells = <0>;
             bindings = <&smumlaut_a>, <&lumlaut_a>;
 
@@ -1159,7 +1083,6 @@
 
         fada_e: fada_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "FADA_E";
             #binding-cells = <0>;
             bindings = <&smfada_e>, <&lfada_e>;
 
@@ -1168,7 +1091,6 @@
 
         ogonek_e: ogonek_e {
             compatible = "zmk,behavior-mod-morph";
-            label = "OGONEK_E";
             #binding-cells = <0>;
             bindings = <&smogo_e>, <&logo_e>;
 
@@ -1177,7 +1099,6 @@
 
         fada_i: fada_i {
             compatible = "zmk,behavior-mod-morph";
-            label = "FADA_I";
             #binding-cells = <0>;
             bindings = <&smfada_i>, <&lfada_i>;
 
@@ -1186,7 +1107,6 @@
 
         fada_o: fada_o {
             compatible = "zmk,behavior-mod-morph";
-            label = "FADA_O";
             #binding-cells = <0>;
             bindings = <&smfada_o>, <&lfada_o>;
 
@@ -1195,7 +1115,6 @@
 
         umlaut_o: umlaut_o {
             compatible = "zmk,behavior-mod-morph";
-            label = "UMLAUT_O";
             #binding-cells = <0>;
             bindings = <&smumlaut_o>, <&lumlaut_o>;
 
@@ -1204,7 +1123,6 @@
 
         fada_u: fada_u {
             compatible = "zmk,behavior-mod-morph";
-            label = "FADA_U";
             #binding-cells = <0>;
             bindings = <&smfada_u>, <&lfada_u>;
 
@@ -1213,7 +1131,6 @@
 
         umlaut_u: umlaut_u {
             compatible = "zmk,behavior-mod-morph";
-            label = "UMLAUT_U";
             #binding-cells = <0>;
             bindings = <&smumlaut_u>, <&lumlaut_u>;
 
@@ -1222,7 +1139,6 @@
 
         acute_c: acute_c {
             compatible = "zmk,behavior-mod-morph";
-            label = "ACUTE_C";
             #binding-cells = <0>;
             bindings = <&smacute_c>, <&lacute_c>;
 
@@ -1231,7 +1147,6 @@
 
         dark_l: dark_l {
             compatible = "zmk,behavior-mod-morph";
-            label = "DARK_L";
             #binding-cells = <0>;
             bindings = <&smdark_l>, <&ldark_l>;
 
@@ -1240,7 +1155,6 @@
 
         acute_n: acute_n {
             compatible = "zmk,behavior-mod-morph";
-            label = "ACUTE_N";
             #binding-cells = <0>;
             bindings = <&smacute_n>, <&lacute_n>;
 
@@ -1249,7 +1163,6 @@
 
         tilde_n: tilde_n {
             compatible = "zmk,behavior-mod-morph";
-            label = "TILDE_N";
             #binding-cells = <0>;
             bindings = <&smtil_n>, <&ltil_n>;
 
@@ -1258,7 +1171,6 @@
 
         acute_s: acute_s {
             compatible = "zmk,behavior-mod-morph";
-            label = "ACUTE_S";
             #binding-cells = <0>;
             bindings = <&smacute_s>, <&lacute_s>;
 
@@ -1267,7 +1179,6 @@
 
         acute_z: acute_z {
             compatible = "zmk,behavior-mod-morph";
-            label = "ACUTE_Z";
             #binding-cells = <0>;
             bindings = <&smacute_z>, <&lacute_z>;
 
@@ -1276,7 +1187,6 @@
 
         dot_z: dot_z {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_Z";
             #binding-cells = <0>;
             bindings = <&smdot_z>, <&ldot_z>;
 
@@ -1287,7 +1197,6 @@
 
         lb_euro: lb_euro {
             compatible = "zmk,behavior-mod-morph";
-            label = "POUND_EURO";
             #binding-cells = <0>;
             bindings = <&uk_pnd>, <&euro>;
 
@@ -1298,7 +1207,6 @@
 
         rgb_encoder: rgb_encoder {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_inc>, <&rgb_dec>;
         };
@@ -1307,7 +1215,6 @@
 
         cc: cc {
             compatible = "zmk,behavior-tap-dance";
-            label = "COLOR_CYCLE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings =
@@ -1321,7 +1228,6 @@
 
         td_bt0: td_bt0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BLUE_TOOTH_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt BT_SEL 0>, <&ubt0>;
@@ -1329,7 +1235,6 @@
 
         td_bt1: td_bt1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BLUE_TOOTH_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt BT_SEL 1>, <&ubt1>;
@@ -1337,7 +1242,6 @@
 
         td_bt2: td_bt2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BLUE_TOOTH_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt BT_SEL 2>, <&ubt2>;
@@ -1345,7 +1249,6 @@
 
         clcw: clcw {
             compatible = "zmk,behavior-tap-dance";
-            label = "CAPS_LOCK_CAPS_WORD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp CLCK>, <&caps_word>;
@@ -1353,7 +1256,6 @@
 
         lscw: lscw {
             compatible = "zmk,behavior-tap-dance";
-            label = "LEFT_SHIFT_CAPS_WORD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&caps_word>;
@@ -1361,7 +1263,6 @@
 
         rscw: rscw {
             compatible = "zmk,behavior-tap-dance";
-            label = "RIGHT_SHIFT_CAPS_WORD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RSHFT>, <&caps_word>;
@@ -1369,7 +1270,6 @@
 
         stm: stm {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_TASK_MANAGER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&tm>;
@@ -1377,7 +1277,6 @@
 
         pwr: pwr {
             compatible = "zmk,behavior-tap-dance";
-            label = "POWER_COMMANDS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RSHFT>, <&slp>, <&rst>, <&off>;
@@ -1385,7 +1284,6 @@
 
         td_btr: td_btr {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BLUE_TOOTH_RELEASE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp ESC>, <&bt BT_CLR>;
@@ -1393,7 +1291,6 @@
 
         pscode: pscode {
             compatible = "zmk,behavior-tap-dance";
-            label = "POWER_SHELL_CODE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp F5>, <&kp F8>;
@@ -1401,7 +1298,6 @@
 
         td_ll_l3: td_ll_l3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_LEFT_LAYER_LAYER_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 3>, <&sl 3>;
@@ -1409,7 +1305,6 @@
 
         td_rl_l3: td_rl_l3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_RIGHT_LAYER_LAYER_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&sl 3>;
@@ -1417,7 +1312,6 @@
 
         td_sp_a: td_sp_a {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPECIAL_A";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&fada_a>, <&ogonek_a>, <&umlaut_a>;
@@ -1425,7 +1319,6 @@
 
         td_sp_e: td_sp_e {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPECIAL_E";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&fada_e>, <&ogonek_e>;
@@ -1433,7 +1326,6 @@
 
         td_sp_o: td_sp_o {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPECIAL_O";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&fada_o>, <&umlaut_o>;
@@ -1441,7 +1333,6 @@
 
         td_sp_u: td_sp_u {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPECIAL_U";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&fada_u>, <&umlaut_u>;
@@ -1449,7 +1340,6 @@
 
         td_sp_n: td_sp_n {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPECIAL_N";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&acute_n>, <&tilde_n>;
@@ -1457,7 +1347,6 @@
 
         td_sp_s: td_sp_s {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPECIAL_S";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&acute_s>, <&essette_s>;
@@ -1465,7 +1354,6 @@
 
         td_sp_z: td_sp_z {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPECIAL_Z";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&acute_z>, <&dot_z>;
@@ -1473,7 +1361,6 @@
 
         td_lt: td_lt {
             compatible = "zmk,behavior-tap-dance";
-            label = "LESS_THEN_DOUBLE_LEFT_MARKS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LT>, <&dbl_left>;
@@ -1481,7 +1368,6 @@
 
         td_gt: td_gt {
             compatible = "zmk,behavior-tap-dance";
-            label = "GREATER_THAN_DOUBLE_RIGHT_MARKS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp GT>, <&dbl_right>;
@@ -1565,4 +1451,12 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
     };
+};
+
+
+&sensors {
+    // Change this to your encoder's number of detents.
+    // If you have multiple encoders with different detents, see
+    // https://zmk.dev/docs/config/encoders#keymap-sensor-config
+    triggers-per-rotation = <20>;
 };
