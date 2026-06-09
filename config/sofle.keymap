@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 &left_encoder  { resolution = <2>; };
 &right_encoder { resolution = <2>; };
@@ -935,7 +936,7 @@
             // ┌───────┬──────┬──────┬──────┬──────┬──────┐             ┌───────┬──────┬──────┬──────┬──────┬───────┐
             // │BT_CLR │ BT0  │ BT1  │ BT2  │ BT3  │ BT4  │             │ HUE+  │  =   │  /   │  *   │  -   │ EFF+  │
             // ├───────┼──────┼──────┼──────┼──────┼──────┤             ├───────┼──────┼──────┼──────┼──────┼───────┤
-            // │ BOOT  │ PSCR │ HOME │  ↑   │  @   │  %   │             │ HUE-  │  7   │  8   │  9   │  +   │       │
+            // │ BOOT  │ PSCR │ HOME │  ↑   │  @   │  %   │             │ HUE-  │  7   │  8   │  9   │  +   │ EP_ON │
             // ├───────┼──────┼──────┼──────┼──────┼──────┤             ├───────┼──────┼──────┼──────┼──────┼───────┤
             // │ BRI-  │ RGB  │  ←   │  ↓   │  →   │  $   │             │ SAT+  │  4   │  5   │  6   │  +   │ SPD+  │
             // ├───────┼──────┼──────┼──────┼──────┼──────┼──────┐┌─────┼───────┼──────┼──────┼──────┼──────┼───────┤
@@ -946,7 +947,7 @@
             //                └──────┴──────┴──────┴──────┴──────┘└─────┴───────┴──────┴──────┴──────┘
             bindings = <
 &bt BT_CLR       &td_bt0          &td_bt1    &td_bt2    &bt BT_SEL 3  &bt BT_SEL 4                            &rgb_ug RGB_HUI  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &rgb_ug RGB_EFF
-&bootloader      &kp PSCRN        &kp HOME   &kp UP     &kp AT        &kp PRCNT                               &rgb_ug RGB_HUD  &kp KP_N7     &kp KP_N8      &kp KP_N9        &kp KP_PLUS   &trans
+&bootloader      &kp PSCRN        &kp HOME   &kp UP     &kp AT        &kp PRCNT                               &rgb_ug RGB_HUD  &kp KP_N7     &kp KP_N8      &kp KP_N9        &kp KP_PLUS   &ext_power EP_ON
 &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &kp LEFT   &kp DOWN   &kp RIGHT     &kp DLLR                                &rgb_ug RGB_SAI  &kp KP_N4     &kp KP_N5      &kp KP_N6        &kp KP_PLUS   &rgb_ug RGB_SPI
 &stm             &out OUT_TOG     &tog 3     &kp C_PREV &kp C_NEXT    &kp HASH      &kp C_PLAY_PAUSE  &trans  &rgb_ug RGB_SAD  &kp KP_N1     &kp KP_N2      &kp KP_N3        &kp KP_ENTER  &rgb_ug RGB_SPD
                                   &trans     &trans     &trans        &trans        &trans            &trans  &trans           &tog 4        &kp KP_N0      &kp KP_DOT
